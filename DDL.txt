@@ -8,8 +8,8 @@ CREATE TABLE "public"."customers1"(id character varying(256) encode lzo4,
 ## load temp customer table
 
 copy "public"."customers1"
-from 's3://glue-databrew-blog/custom-sql/customer_primary.csv'
-iam_role 'arn:aws:iam::827066243559:role/myRedshiftRole'
+from 's3://<S3 path>/customer_primary.csv'
+iam_role '<Redshift IAM Role ARN>'le'
 CSV; 
 
 ## ctas customer table to get unique ID 
@@ -37,8 +37,8 @@ CREATE TABLE "public"."order"(order_id    integer,
 ## load orders table
 
 copy "public"."order"
-from 's3://glue-databrew-blog/custom-sql/order_data.csv'
-iam_role 'arn:aws:iam::827066243559:role/myRedshiftRole'
+from 's3://<S3 path>/order_data.csv'
+iam_role '<Redshift IAM Role ARN>'
 CSV; 
 
 ## Custom SQL that considers only USD data
