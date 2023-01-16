@@ -22,7 +22,7 @@ CSV;
 
 ```
 
-## ctas customer table to get unique ID 
+## create customer table to get unique ID 
 
 ```
 create table customer as 
