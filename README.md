@@ -12,7 +12,7 @@ CREATE TABLE "public"."customers1"(id character varying(256) encode lzo4,
                                 first_name character varying(256) encode lzo,
                                 last_name  character varying(256) encode lzo);
 ```
-## load temp customer table
+## Load temp customer table
 
 ```
 copy "public"."customers1"
@@ -22,7 +22,7 @@ CSV;
 
 ```
 
-## create customer table to get unique ID 
+## Create customer table to get unique ID 
 
 ```
 create table customer as 
@@ -47,7 +47,7 @@ CREATE TABLE "public"."order"(order_id    integer,
 
 ```
 
-## load orders table
+## Load orders table
 
 ```
 copy "public"."order"
