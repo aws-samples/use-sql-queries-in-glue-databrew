@@ -7,16 +7,20 @@ The following diagram illustrates the architecture for our solution.
 
 ## TABLE1 - create temp customer table
 
+```
 CREATE TABLE "public"."customers1"(id character varying(256) encode lzo4,
                                 first_name character varying(256) encode lzo,
                                 last_name  character varying(256) encode lzo);
-
+```
 ## load temp customer table
 
+```
 copy "public"."customers1"
 from 's3://<S3 path>/customer_primary.csv'
 iam_role '<Redshift IAM Role ARN>'
 CSV; 
+
+```
 
 ## ctas customer table to get unique ID 
 
